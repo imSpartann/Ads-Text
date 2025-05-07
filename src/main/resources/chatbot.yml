@@ -1,0 +1,7 @@
+responses:
+  register:
+    - "&aTo register, use &e/register <password> <password>"
+  how to register:
+    - "&aTo register, use &e/register <password> <password>"
+  login:
+    - "&aTo login, use &e/login <password>"

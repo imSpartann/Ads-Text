@@ -1,0 +1,12 @@
+#Enable or disable the features of the plugin.
+features:
+  ads: true
+  welcome-message: true
+  auto-respond: true
+
+# How often to Ads-broadcast messages (in minutes)
+interval-minutes: 10
+
+#Chatbot response delay in ticks.
+# 20 ticks = 1 second
+chatbot-response-delay-ticks: 1
