@@ -20,7 +20,7 @@ tasks.withType<JavaExec> {
 }
 
 group = "com.acey.adstext"
-version = "1.1.2"
+version = "1.1.2a"
 
 repositories {
     mavenCentral()
