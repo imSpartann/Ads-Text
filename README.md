@@ -63,8 +63,9 @@ adstext.reload:
 
 ## Compatibility
 
-- Paper 1.21.4 and above
-- Spigot 1.21.4 and above
+- Paper 1.21.4 and above  
+- Spigot 1.21.4 and above  
+- **Requires Java 21+**
 
 ## License
 
