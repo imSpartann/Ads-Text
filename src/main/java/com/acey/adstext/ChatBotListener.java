@@ -49,7 +49,9 @@ public class ChatBotListener implements Listener {
                 List<String> replies = responses.get(key);
                 plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
                     for (String response : replies) {
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', response));
+                        String formatted = ChatColor.translateAlternateColorCodes('&', response)
+                                .replace("%player%", player.getName());
+                        player.sendMessage(formatted);
                     }
                 }, responseDelayTicks);
                 break;
