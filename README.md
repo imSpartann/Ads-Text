@@ -1,52 +1,53 @@
-# Ads-Text
+# 📢 Ads-Text
 
-**Ads-Text** is a lightweight, configurable Minecraft plugin that automates server communication through scheduled broadcasts, welcome messages, and smart chat auto-responses. Designed for ease of use and full customization, it enhances player interaction without requiring complex setup.
+**Ads-Text** is a lightweight plugin that lets you broadcast messages, send welcome messages, and auto-respond to chat using customizable YAML files.  
+Easy to configure, reloadable, and perfect for any Paper or Spigot server.
 
-## Features
+Broadcast & Auto Respond messages support clickable `http/https` links, which open in the player's web browser when clicked (must be wrapped in `<` and `>`).
 
-- **Automated Broadcasts**  
-  Display configurable messages to all players at set intervals with optional clickable links.
+👉 **[View the full Wiki here »](https://github.com/imSpartann/Ads-Text/wiki)**
 
-- **Welcome Messages**  
-  Send a custom message to each player when they join the server, supporting color codes and link components.
+---
 
-- **Smart Chat Auto-Respond**  
-  Detects keywords in player chat and replies with predefined responses loaded from a YAML file.
+## 📂 Configuration Files
 
-- **Full Config Reload Support**  
-  Modify settings and messages without restarting the server using `/ads reload`.
+| File           | Description                                                   |
+|----------------|---------------------------------------------------------------|
+| `config.yml`   | Controls feature toggles, broadcast interval, chatbot delay   |
+| `ads.yml`      | Contains scheduled messages to broadcast to all players       |
+| `connect.yml`  | Stores the welcome message sent to players on join            |
+| `chatbot.yml`  | Keyword-based triggers and responses for chat auto-replies    |
 
-- **Modular Feature Control**  
-  Enable or disable ads, welcome messages, or auto-respond functionality through `config.yml`.
+---
 
-## Configuration
-
-The plugin uses multiple YAML files for configuration:
-
-- `config.yml`: Controls plugin settings like interval timing and feature toggles.
-- `ads.yml`: List of broadcast messages.
-- `connect.yml`: Messages shown when players join.
-- `chatbot.yml`: Keyword-to-response mappings for chat triggers.
-
-### Example: `config.yml`
+## ⚙️ Example `config.yml`
 
 ```yaml
+# Enable or disable the features of the plugin.
 features:
   ads: true
   welcome-message: true
   auto-respond: true
 
+# How often to Ads-broadcast messages (in minutes)
 interval-minutes: 10
 
+# Chatbot response delay in ticks.
+# 20 ticks = 1 second
 chatbot-response-delay-ticks: 1
 ```
-## Commands
 
-| Command       | Description                 | Permission       |
-|---------------|-----------------------------|------------------|
-| /ads reload   | Reloads all plugin configs  | adstext.reload   |
+---
 
-## Permissions
+## 💬 Commands
+
+| Command       | Description                  |
+|---------------|------------------------------|
+| `/ads reload` | Reloads all plugin configs   |
+
+---
+
+## 🔐 Permissions
 
 ```yaml
 adstext.reload:
@@ -54,24 +55,27 @@ adstext.reload:
   default: op
 ```
 
-## Installation
+---
 
-1. Place the compiled `Ads-Text.jar` into your server's `/plugins` directory.
-2. Start the server to generate default config files.
-3. Edit `ads.yml`, `connect.yml`, and `chatbot.yml` to fit your server style.
-4. Use `/ads reload` to apply changes without restarting.
+## 🚀 Setup Instructions
 
-## Compatibility
+1. Place the plugin `.jar` file into your server’s `/plugins` folder.
+2. Start the server to generate the configuration files.
+3. Edit the YAML files to customize your messages and settings.
+4. Use `/ads reload` to apply changes without restarting (feature toggles may still require restart).
 
-- Paper 1.21.4 and above  
-- Spigot 1.21.4 and above  
-- **Requires Java 21+**
+---
 
-## License
+## 🧾 Requirements
 
-This project is licensed under the GNU General Public License v3.0.
+- ✅ Minecraft Server: Paper or Spigot **1.21.x**
+- ✅ Java Version: **21 or higher**
 
-## Contributors
+---
 
-- Acey ([imSpartann](https://github.com/imSpartann))
+## ⭐ Support the Project
 
+If you enjoy using this plugin, please:
+- ⭐ **Rate it 5 stars** on [SpigotMC](https://www.spigotmc.org/resources/ads-text.124798/)
+- 📝 Leave a comment or feedback
+- 🤝 [Submit issues or contribute on GitHub](https://github.com/imSpartann/Ads-Text/issues)
